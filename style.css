@@ -28,10 +28,12 @@ body {
 
 .navbar {
     position: fixed;
-    top: 0;  /*  garante que a navbar ficará no topo sempre  */
+    top: 0;
+    /*  garante que a navbar ficará no topo sempre  */
     background: rgba(15, 23, 42, 0.8);
     width: 100%;
-    z-index: 100;  /*  Define quem fica na frente  */
+    z-index: 100;
+    /*  Define quem fica na frente  */
     padding: 1.5rem;
 }
 
@@ -63,4 +65,34 @@ a::after {  /*  "after => depois", ultilizado para colocar coisas depois de algu
 
 a:hover::after {
     width: 100%;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.perfil {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 5px 14px 29px 7px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 5px 14px 29px 7px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 5px 14px 29px 7px rgba(0, 0, 0, 0.6);
+    border: 4px solid var(--vidro);
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--primaria);
+    font-weight: bold;
+    padding: 20px;
+}
+
+.paragrafo01 {
+    font-size: 1.2rem;
+    color: var(--claro);
 }
