@@ -28,12 +28,10 @@ body {
 
 .navbar {
     position: fixed;
-    top: 0;
-    /*  garante que a navbar ficará no topo sempre  */
+    top: 0;  /*  garante que a navbar ficará no topo sempre  */
     background: rgba(15, 23, 42, 0.8);
     width: 100%;
-    z-index: 100;
-    /*  Define quem fica na frente  */
+    z-index: 100;  /*  Define quem fica na frente  */
     padding: 1.5rem;
 }
 
@@ -103,7 +101,7 @@ h1 {
 
 .sobre-titulo {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .sobre-caixa {
@@ -114,3 +112,52 @@ h1 {
     background: rgba(255, 255, 255, 0.05);
 }
 
+.projetos {
+    padding: 6rem 2rem;
+}
+
+.img-pj {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.cx-projeto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.projetos-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+}
+
+.projetos-card:hover {
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03);  /* "trasnform" transforma => translate eixo Y = movimenta em -10px e scale aumenta a escala (maior)  */
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.projetos-titulo {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.projetos-nome {
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.25rem;  /*  altura da linha, para ficar mais alta que o comum  */
+}
+
+.projetos-nome {
+    margin-bottom: 8px;
+}
+
+.cx-textos {
+    padding: 1.5rem;
+}
