@@ -1,12 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>PortFolio</title>
 </head>
+
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li class="menu">
+                    <a href="#inicio">Início</a>
+                </li>
+
+                <li class="menu">
+                    <a href="#sobre">Sobre</a>
+                </li>
+
+                <li class="menu">
+                    <a href="#projetos">Projetos</a>
+                </li>
+
+                <li class="menu">
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="inicio" class="topo">
+        <div>
+            <img src="img/eu.jpeg" alt="foto de Alessandro" class="perfil">
+            <h1>Alessandro Henrique</h1>
+            <p>🎓 Estudante de ADS (Análise e Desenvolvimento de Sistemas) 💻 Beginner in C language | JavaScript | HTML
+                & CSS</p>
+        </div>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="cx-sobre">
+            <p class="paragrafo">Olá! Me chamo Alessandro e sou estudante de ADS (Análise e Desenvolvimento de Sistemas)
+                Iniciante em
+                Linguagem C | Java Script</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="cx-projeto">
+
+            <div class="projetos-card">
+                <img src="img/img-projeto.png" alt="projetos">
+                <h3 class="projeto-potavel">Loja de água potável</h3>
+                <p class="projeto-agua">Formulário de cadastro de produtos em uma loja de água potável, tela moderna e
+                    resposiva</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contato=pessoal">contatos</h2>
+        <form class="campo-form" id="formulario">
+            <div class="form-nome">
+                <input placeholder="nome" class="nome">
+            </div>
+
+            <div class="msg">
+                <textarea placeholder="Digite sua mensagem" class="digite"</textarea>
+            </div>
+        </form>
+    </section>
+
 </body>
+
 </html>
