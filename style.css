@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    /*Significa um "movimento suave" ao dar scroll (rolar para baixo)*/
+}
+
+:root {
+    /* "root" (raiz) - raiz do projeto é acrecentado os valores abaixo. o "--" e o nome que vem adiante, entende-se como uma variável
+    (um valor cravado) toda vez que quero chama-lo usa-se "--" */
+    --primaria: #4f46e5;
+    --secundaria: #7c3aed;
+    --escuro: #0f172a;
+    --maisescuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0, 1);
+}
+
+body {
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;  /*  garante que a navbar ficará no topo sempre  */
+    background: rgba(15, 23, 42, 0.8);
+    width: 100%;
+    z-index: 100;  /*  Define quem fica na frente  */
+    padding: 1.5rem;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+a {
+    color: var(--claro);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+a::after {  /*  "after => depois", ultilizado para colocar coisas depois de algum item  */
+    content: '';  /*  tem que ter obrigatóriamente ao usar o after  */
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.3s ease;  /*  toda vez que o valor do width trocar no "after/hover" a transição é aplicada  */
+}
+
+a:hover::after {
+    width: 100%;
+}
