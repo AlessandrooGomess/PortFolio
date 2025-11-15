@@ -94,5 +94,23 @@ h1 {
 
 .paragrafo01 {
     font-size: 1.2rem;
-    color: var(--claro);
 }
+
+.sobre {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.sobre-titulo {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.sobre-caixa {
+    padding: 2rem;
+    max-width: 650px;
+    margin: 0 auto;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
