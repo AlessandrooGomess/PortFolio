@@ -86,18 +86,20 @@
 
     <section id="contatos" class="contatos">
         <h2 class="contato-titulo">Entre em Contato</h2>
-        <form class="campo-form" id="formulario">
+        <form class="campo-form" id="formulario" onsubmit="enviarmsg(event)">  <!--onsubmit = função para submeter o envio do formulário quando clicar no botão.-->
             <div class="msg">
-                <input placeholder="nome" class="digite">
+                <input placeholder="Nome" class="digite" id="id1">
             </div>
 
             <div class="msg">
-                <textarea class="digite" placeholder="Digite sua Mensagem"></textarea>
+                <textarea class="digite" placeholder="Digite sua Mensagem" id="id2" rows="6"></textarea>
             </div>
 
             <button type="submit" class="botao">Enviar via WhataApp</button>
         </form>
     </section>
+
+    <script src="script.js"></script>
 
 </body>
 
