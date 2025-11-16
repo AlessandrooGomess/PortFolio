@@ -6,12 +6,10 @@
 }
 
 html {
-    scroll-behavior: smooth;
-    /*Significa um "movimento suave" ao dar scroll (rolar para baixo)*/
+    scroll-behavior: smooth;   /*Significa um "movimento suave" ao dar scroll (rolar para baixo)*/
 }
 
-:root {
-    /* "root" (raiz) - raiz do projeto é acrecentado os valores abaixo. o "--" e o nome que vem adiante, entende-se como uma variável
+:root {  /* "root" (raiz) - raiz do projeto é acrecentado os valores abaixo. o "--" e o nome que vem adiante, entende-se como uma variável
     (um valor cravado) toda vez que quero chama-lo usa-se "--" */
     --primaria: #4f46e5;
     --secundaria: #7c3aed;
@@ -81,7 +79,8 @@ main {
     -webkit-box-shadow: 5px 14px 29px 7px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 5px 14px 29px 7px rgba(0, 0, 0, 0.6);
     border: 4px solid var(--vidro);
-    animation: flutuar 3s ease-in-out infinite;  /*  Animação de movimento (declarada em "@keyframes flutuar", "infinite" = animação infinita  */
+    animation: flutuar 3s ease-in-out infinite;   /*  Animação de movimento (declarada em "@keyframes flutuar", "infinite" = animação infinita  */
+    object-fit: cover;
 }
 
 h1 {
@@ -91,7 +90,7 @@ h1 {
     padding: 20px;
 }
 
-.paragrafo01 {
+.paragrafo {
     font-size: 1.2rem;
 }
 
@@ -118,7 +117,7 @@ h1 {
 }
 
 .img-pj {
-    height: 200px;
+    height: auto;
     width: 100%;
     object-fit: cover;
     border-radius: 16px;
@@ -138,7 +137,7 @@ h1 {
 
 .projetos-card:hover {
     box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
-    transform: translateY(-10px) scale(1.03);  /* "trasnform" transforma => translate eixo Y = movimenta em -10px e scale aumenta a escala (maior)  */
+    transform: translateY(-10px) scale(1.03);   /* "trasnform" transforma => translate eixo Y = movimenta em -10px e scale aumenta a escala (maior)  */
     transition: all 0.5s ease;
     cursor: pointer;
 }
@@ -152,7 +151,7 @@ h1 {
 
 .projetos-nome {
     color: rgba(226, 232, 240, 0.8);
-    line-height: 1.25rem;  /*  altura da linha, para ficar mais alta que o comum  */
+    line-height: 1.25rem;   /*  altura da linha, para ficar mais alta que o comum  */
 }
 
 .projetos-nome {
@@ -198,7 +197,7 @@ h1 {
 
 .campo-form:focus {
     border-color: var(--secundaria);
-    box-shadow: 0 0 10px rgba(79, 70, 299, 0,3);
+    box-shadow: 0 0 10px rgba(79, 70, 299, 0, 3);
 }
 
 .botao {
@@ -229,17 +228,75 @@ h1 {
     height: 100%;
     z-index: -1;
     opacity: 0.5;
-    background: radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),  /* Cria um circulo */
-    radial-gradient(circle at 80% 90%, var(--secundaria) 0%, transparent 20%),
-    var(--maisescuro);
+    background: radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
+        /* Cria um circulo */
+        radial-gradient(circle at 80% 90%, var(--secundaria) 0%, transparent 20%),
+        var(--maisescuro);
 }
 
-@keyframes flutuar {  /* Serve para criar animações. */
-    0%, 100% {  /* Começa no ponto 0 e vai até 100 */
+@keyframes flutuar {
+
+    0%,  /* Serve para criar animações. */
+    100% {  /* Começa no ponto 0 e vai até 100 */
         transform: translateY(0);
     }
 
-    50% {  /*  Nos 50% do movimento ele diminui em 20  */
+    50% {   /*  Nos 50% do movimento ele diminui em 20  */
         transform: translateY(-20px);
     }
+}
+
+@media(max-width:1050px) {
+
+    .navbar {
+        width: 100%;
+    }
+
+    ul {
+        gap: 2rem;
+    }
+
+    a {
+        font-weight: 350;
+    }
+
+    .perfil {
+        width: 180px;
+        height: 180px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        display: flex;
+        text-align: center;
+    }
+
+    .paragrafo01 {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .sobre-titulo {
+        font-size: 1.8rem;
+    }
+
+    .paragrafo {
+        font-size: 0.8rem;
+    }
+
+    .projetos {
+        padding: 2.5rem 0;
+    }
+
+    .projetos-titulo {
+        display: flex;
+        justify-content: center;
+        font-size: 1.8rem;
+        margin-bottom: 50px;
+    }
+
+    .contato-titulo {
+        font-size: 1.5rem;
+    }
+
 }
