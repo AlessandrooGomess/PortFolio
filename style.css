@@ -152,9 +152,6 @@ h1 {
 .projetos-nome {
     color: rgba(226, 232, 240, 0.8);
     line-height: 1.25rem;   /*  altura da linha, para ficar mais alta que o comum  */
-}
-
-.projetos-nome {
     margin-bottom: 8px;
 }
 
@@ -277,11 +274,11 @@ h1 {
     }
 
     .sobre-titulo {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .paragrafo {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .projetos {
